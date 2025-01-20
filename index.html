@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>AI学習システム</title>
+</head>
+<body>
+    <h1>AI学習システム</h1>
+    <textarea id="inputText" placeholder="ここに言葉を入力してください" rows="4" cols="50"></textarea><br>
+    <button onclick="learn()">学習</button>
+    <button onclick="save()">保存</button>
+    <input type="file" id="fileInput" onchange="load(event)">
+    <button onclick="loadFile()">読み込み</button>
+    <pre id="output"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
