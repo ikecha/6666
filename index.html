@@ -2,16 +2,23 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>AI学習システム</title>
+    <title>シンプルチャットボット</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #chat { border: 1px solid #ccc; padding: 10px; width: 300px; height: 400px; overflow-y: scroll; margin-bottom: 10px; }
+        .message { margin: 5px 0; }
+        .user { text-align: right; }
+        .bot { text-align: left; color: blue; }
+    </style>
 </head>
 <body>
-    <h1>AI学習システム</h1>
-    <textarea id="inputText" placeholder="ここに言葉を入力してください" rows="4" cols="50"></textarea><br>
-    <button onclick="learn()">学習</button>
+    <h1>シンプルチャットボット</h1>
+    <div id="chat"></div>
+    <input type="text" id="inputText" placeholder="ここに言葉を入力してください">
+    <button onclick="sendMessage()">送信</button>
     <button onclick="save()">保存</button>
-    <input type="file" id="fileInput" onchange="load(event)">
-    <button onclick="loadFile()">読み込み</button>
-    <pre id="output"></pre>
+    <input type="file" id="fileInput" onchange="load(event)" style="display:none;">
+    <button onclick="document.getElementById('fileInput').click()">読み込み</button>
 
     <script src="script.js"></script>
 </body>
